@@ -197,4 +197,4 @@ if __name__ == "__main__":
     host = CFG["server"]["host"]
     port = CFG["server"]["port"]
     print(f"Starting MiMo TTS API on {host}:{port}")
-    app.run(host=host, port=port, debug=True)
+    app.run(host=host, port=port, debug=CFG["server"].get("debug", False))
