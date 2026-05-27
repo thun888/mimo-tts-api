@@ -1,0 +1,16 @@
+server:
+  host: "0.0.0.0"
+  port: 5000
+
+mimo:
+  api_key: "tp-sfsdgedfssdrgrfghrfghgdsfhdrfthfdgghsedrgergregd"
+  api_url: "https://token-plan-cn.xiaomimimo.com/v1/chat/completions"
+  model: "mimo-v2.5-tts"
+
+cache:
+  dir: "cache"
+
+voice_presets:
+  chloe:
+    voice: "白桦"
+    description: "Bright, bouncy, slightly sing-song tone — like you are bursting with good news you can barely hold in. Fast pace, rising pitch at the end."
