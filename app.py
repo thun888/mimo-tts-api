@@ -10,6 +10,7 @@ from pathlib import Path
 import yaml
 import requests
 from flask import Flask, request, jsonify, send_file
+from flask_cors import CORS
 
 # ---------------------------------------------------------------------------
 # Load config
@@ -42,6 +43,7 @@ with open(CONFIG_PATH, "r", encoding="utf-8") as f:
 # ---------------------------------------------------------------------------
 
 app = Flask(__name__)
+CORS(app, origins=CFG.get("cors", {}).get("allowed_origins", ["*"]))
 
 CACHE_DIR = Path(__file__).parent / CFG["cache"]["dir"]
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
